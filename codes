@@ -1,0 +1,32 @@
+To start docker service
+1. Start docker service - sudo service docker start 
+2. Step 1 will auto start all docker container, you may want to stop unused container such as SLAVE e.g. sudo docker stop 2b5c4bd4ad37
+
+To start docker container
+1. View all docker container and get container ID - sudo docker ps -a 
+2. Start specific docker container with container ID - sudo docker start 46c69fccca2d
+
+To stop docker container
+1. View all docker container that is running and get container ID - sudo docker ps 
+2. Stop specific docker container with container ID - sudo docker stop 46c69fccca2d
+
+To stop docker service
+1. Stop all running docker container first to prevent unsaved work 
+2. Stop docker service - sudo service docker stop
+
+To check status of any trace of dockers service. This is to allow other users in 48 to fully use the memory when dockers are not used 
+1. ps -ef | grep docker 
+2. if there is still trace - sudo killall docker 
+
+
+
+To run the scripts
+1. sudo docker exec -it fk-master bash 
+
+To access the docker container
+2. /spark/bin/spark-submit --version 
+
+To transfer file/foler to docker container 
+1. docker cp YOURSCRIPTS fk-master:/root 
+2. the file/folder will be under root when you access dockers
+
