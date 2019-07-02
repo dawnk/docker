@@ -18,8 +18,6 @@ To check status of any trace of dockers service. This is to allow other users in
 1. ps -ef | grep docker 
 2. if there is still trace - sudo killall docker 
 
-
-
 To run the scripts
 1. sudo docker exec -it fk-master bash 
 
@@ -30,3 +28,7 @@ To transfer file/foler to docker container
 1. docker cp YOURSCRIPTS fk-master:/root 
 2. the file/folder will be under root when you access dockers
 
+##Without sudo 
+To create docker container from image
+1. Creates and runs docker container from fk-master:v1, removes docker container on exit and names container as fk-master
+- docker run -it --rm --name fk-master fk-master:v1
