@@ -32,3 +32,4 @@ To transfer file/foler to docker container
 To create docker container from image
 1. Creates and runs docker container from fk-master:v1, removes docker container on exit and names container as fk-master
 - docker run -it --rm --name fk-master fk-master:v1
+2. DO not exit container. Instead detach by ctrl-p, ctrl-q
